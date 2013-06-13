@@ -29,6 +29,7 @@ zstyle ':prezto:load' pmodule \
   'history' \
   'directory' \
   'spectrum' \
+  'notify' \
   'git-escape-magic' \
   'utility' \
   'completion' \
@@ -36,6 +37,8 @@ zstyle ':prezto:load' pmodule \
   'prompt'
 
 unsetopt SHARE_HISTORY  # Don't share history between shells.
+
+zstyle ':prezto:module:notify' auto-notify 'yes'
 
 #
 # Editor
