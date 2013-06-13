@@ -26,13 +26,15 @@ zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
-  'editor' \
   'history' \
   'directory' \
   'spectrum' \
   'utility' \
   'completion' \
+  'syntax-highlighting' \
   'prompt'
+
+unsetopt SHARE_HISTORY  # Don't share history between shells.
 
 #
 # Editor
