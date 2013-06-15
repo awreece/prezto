@@ -74,3 +74,4 @@ if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
 
+if [[ -f "$HOME/.zshenv_local" ]]; then source ~/.zshenv_local; fi
