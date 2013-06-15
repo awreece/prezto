@@ -44,9 +44,13 @@ zstyle ':prezto:module:notify' auto-notify 'yes'
 # Editor
 #
 
+# Add some readline keys back.
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '^x^e' edit-command-line
+bindkey "^A" beginning-of-line
+bindkey "^E" end-of-line
+bindkey "^R" history-incremental-search-backward
 
 # Set the key mapping style to 'emacs' or 'vi'.
 # zstyle ':prezto:module:editor' keymap 'vi'
