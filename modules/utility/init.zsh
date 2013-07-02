@@ -61,7 +61,13 @@ alias type='type -a'
 # ls
 if is-callable 'dircolors'; then
   # GNU Core Utilities
-  alias ls='ls --group-directories-first'
+  
+  # TODO(awreece) Check for group directories first!
+  if ls --group-directories-first >/dev/null 2>/dev/null; then
+    alias ls='ls --group-directories-first'
+  else
+    alias ls='ls'
+  fi
 
   if zstyle -t ':prezto:module:utility:ls' color; then
     if [[ -s "$HOME/.dir_colors" ]]; then
