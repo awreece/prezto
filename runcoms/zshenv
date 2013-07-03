@@ -74,7 +74,6 @@ if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
 
-# We load *both* ZDOTDIR and HOME because I once neeced to load the zsh
-# files as a different user, so I just set ZDOTDIR.
-if [[ -f "$ZDOTDIR/.zshenv_local" ]]; then source $ZDOTDIR/.zshenv_local; fi
-if [[ -f "$HOME/.zshenv_local" ]]; then source $HOME/.zshenv_local; fi
+if [[ -f "${ZDOTDIR:-$HOME}/.zshenv_local" ]]; then
+  source ${ZDOTDIR:-$HOME}/.zshenv_local
+fi
