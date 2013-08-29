@@ -31,7 +31,6 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'notify' \
   'git-escape-magic' \
-  'utility' \
   'completion' \
   'syntax-highlighting' \
   'prompt'
