@@ -11,8 +11,8 @@ case "$OSTYPE" in
     ;;
   (linux-gnu*)
     # http://stackoverflow.com/a/8688624/447288
-    xprop -root -f _NET_ACTIVE_WINDOW 0x ' $0' _NET_ACTIVE_WINDOW  \
-      | awk '{print $2}'
+    [[ -n $DISPLAY ]] && xprop -root -f _NET_ACTIVE_WINDOW 0x ' $0'  \
+                               _NET_ACTIVE_WINDOW | awk '{print $2}'
     ;;
   (*)
     return 1
